@@ -1,12 +1,14 @@
 import React from "react";
+import { useQuizContext } from "../contexts/QuizContext";
 
-export default function Progress({
-  currentQuestion,
-  numberOfQuestions,
-  points,
-  maxPossiblePoints,
-  answer,
-}) {
+export default function Progress() {
+  const {
+    currentQuestion,
+    numberOfQuestions,
+    points,
+    maxPossiblePoints,
+    answer,
+  } = useQuizContext();
   return (
     <header className="progress">
       <progress

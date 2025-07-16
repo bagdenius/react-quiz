@@ -1,6 +1,8 @@
-import React from "react";
+import { useQuizContext } from "../contexts/QuizContext";
 
-const Options = ({ question, answer, dispatch }) => {
+const Options = () => {
+  const { questions, currentQuestion, answer, dispatch } = useQuizContext();
+  const question = questions.at(currentQuestion);
   const hasAnswered = answer !== null;
 
   return (
